@@ -3,7 +3,9 @@ import cv2
 cap = cv2.VideoCapture(0)
 fourcc = cv2.VideoWriter_fourcc(*'XVID')
 out = cv2.VideoWriter('output.avi', fourcc, 20.0, (640,480))
-
+# setting up the camera
+cap.set(3 , 888)
+cap.set(4, 99)
 while True:
     ret, frame = cap.read()
     if ret == True:
